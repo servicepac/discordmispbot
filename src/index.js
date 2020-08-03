@@ -44,8 +44,6 @@ bot.on("message", async msg => {
     };
     let getfindings = await getioc();
     console.log(getfindings);
-    //poop = JSON.stringify(getfindings);
-    //poop2 = poop.substring(0, 150);
     for (element in getfindings) {
       console.log(element);
       msg.channel.send(`https://misp.serverurl.org/events/view/${
