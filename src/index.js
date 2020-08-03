@@ -3,7 +3,7 @@ const axios = require("axios");
 const bot = new Discord.Client();
 
 const prefix = "!";
-const token = "NzM5NjMxMDk1Mjc2MTA5ODM0.XydRIg.JAdhVTu19s6ZFoNTZLSKVH5Lc8I";
+const token = "";
 
 bot.on("ready", () => {
   console.log("bot is working");
@@ -23,7 +23,7 @@ bot.on("message", async msg => {
 
   if (command === "misp") {
     const combinedArgs = args.join(" ");
-    const rotoken = "WCfSZxP4AQsISXd0oqzYiSBEhnWXJddkFX1YWwfp";
+    const rotoken = "";
     let getioc = async () => {
       let response = await axios
         .get(
@@ -48,7 +48,7 @@ bot.on("message", async msg => {
     //poop2 = poop.substring(0, 150);
     for (element in getfindings) {
       console.log(element);
-      msg.channel.send(`https://workgroup.trustedmatrix.org/events/view/${
+      msg.channel.send(`https://misp.serverurl.org/events/view/${
         getfindings[element].id
       } 
       Date = ${getfindings[element].date} 
