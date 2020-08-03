@@ -27,7 +27,7 @@ bot.on("message", async msg => {
     let getioc = async () => {
       let response = await axios
         .get(
-          `https://workgroup.trustedmatrix.org/events/index/searchall:${combinedArgs}`,
+          `https://misp.serverurl.org/events/index/searchall:${combinedArgs}`,
           {
             headers: {
               Authorization: `${rotoken}`,
