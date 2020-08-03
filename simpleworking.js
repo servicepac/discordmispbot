@@ -44,10 +44,8 @@ bot.on("message", async msg => {
     };
     let getfindings = await getioc();
     console.log(getfindings[0].info);
-    //poop = JSON.stringify(getfindings);
-    //poop2 = poop.substring(0, 150);
     msg.channel.send(`
-      \n https://workgroup.trustedmatrix.org/events/view/${getfindings[0].id} 
+      \n https://misp.serverurl.org/events/view/${getfindings[0].id} 
       \n Date = ${getfindings[0].date} 
       \n Title = ${getfindings[0].info}`);
   }
