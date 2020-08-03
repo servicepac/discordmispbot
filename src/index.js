@@ -20,6 +20,17 @@ bot.on("message", async msg => {
 
   const command = args.shift().toLowerCase();
   console.log(args);
+  
+   if (command === "help") {
+    msg.channel.send(`List of Available Commands: 
+    \n !misp $variable - search misp for an indicator (IP/hash/bitcoinWallet/email/Domain-etc)
+    \n !otx $variable- search Alienvault Online Threat Exchange for indicator
+    \n !threatconnect $variable - search threatconnect
+    \n !vt $hash - view AV score for a given hash on virustotal
+    \n !shodan $variable - search shodan
+    \n !multi $variable - search misp/otx/tc/and vt for given indicator
+    \n !whois $ipaddress - query ip address for whois/rwhois info`);
+  }
 
   if (command === "misp") {
     const combinedArgs = args.join(" ");
