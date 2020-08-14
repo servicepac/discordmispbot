@@ -20,9 +20,9 @@ bot.on("message", async msg => {
 
   const command = args.shift().toLowerCase();
   console.log(args);
-  
+
    if (command === "help") {
-    msg.channel.send(`List of Available Commands: 
+    msg.channel.send(`List of Available Commands:
     \n !misp $variable - search misp for an indicator (IP/hash/bitcoinWallet/email/Domain-etc)
     \n !otx $variable- search Alienvault Online Threat Exchange for indicator
     \n !threatconnect $variable - search threatconnect
@@ -32,6 +32,13 @@ bot.on("message", async msg => {
     \n !whois $ipaddress - query ip address for whois/rwhois info`);
   }
 
+  if (command === "whois") {
+    //check freegeoip.net
+    axios.get(`http://freegeoip.net/json/${combinedArgs}`)
+      //check viewdns.info
+      
+
+  }
   if (command === "misp") {
     const combinedArgs = args.join(" ");
     const rotoken = "";
@@ -59,8 +66,8 @@ bot.on("message", async msg => {
       console.log(element);
       msg.channel.send(`https://misp.serverurl.org/events/view/${
         getfindings[element].id
-      } 
-      Date = ${getfindings[element].date} 
+      }
+      Date = ${getfindings[element].date}
       Title = ${getfindings[element].info}`);
     }
   }

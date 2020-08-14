@@ -1,9 +1,17 @@
 //API key's and urls here:
 
-const token = '' //Discord token
-const misptoken = '' //MISP api key
-const mispserver = '' //MISP URL
-const shodantoken = '' //shodan.io api key
-const alienvaultotx = '' //alienvault api key
-const vttoken = '' //virustotal api key
-const threatconnect = '' //threatconnect token
+var config = {};
+
+config.discordtoken = '' //Discord token
+config.misptoken = '' //MISP api key
+config.mispserver = '' //MISP URL
+config.shodanurl = '' //Shodan API Url
+config.shodantoken = '' //shodan.io api key
+config.otxurl = '' //
+config.otx = '' //alienvault api key
+config.vturl = '' // virustotal api url
+config.vttoken = '' //virustotal api key
+config.threatconnecturl = '' //tc API url
+config.threatconnect = '' //threatconnect token
+
+module.exports = config;
